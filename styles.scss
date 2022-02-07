@@ -1,0 +1,103 @@
+// Imports
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+// Primary colors
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+
+// Neutral colors
+$dark-gray: hsl(0, 0%, 59%);
+
+//Font
+$font-family: "Kumbh Sans", sans-serif;
+$font-size: 18px;
+
+//Border
+$border-radius: 20px;
+
+//CSS
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $dark-cyan;
+  background: no-repeat url(./images/bg-pattern-top.svg),
+    no-repeat url(./images/bg-pattern-bottom.svg);
+  background-color: $dark-cyan;
+  background-position: top -480px left -250px, top 400px right -400px;
+  font-family: $font-family;
+  color: $dark-gray;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  border-radius: $border-radius;
+  background-color: white;
+  width: max-content;
+  &__head {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    background-image: url(./images/bg-pattern-card.svg);
+    display: flex;
+    justify-content: center;
+  }
+  &__avatar {
+    transform: translateY(50%);
+    border-radius: 50%;
+    border: 5px solid white;
+  }
+  &__body {
+    transform: translateY(50%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75em;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+  &__header {
+    font-size: $font-size;
+    color: $very-dark-desaturated-blue;
+    &--age {
+      font-weight: 400;
+      margin-left: 1ex;
+      color: $dark-gray;
+    }
+  }
+  &__stats {
+    border-top: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 1em 2em;
+    column-gap: 2em;
+    row-gap: 0.25em;
+    text-align: center;
+    &-header {
+      font-weight: 700;
+      font-size: $font-size;
+      color: $very-dark-desaturated-blue;
+    }
+    &-label {
+      font-size: smaller;
+    }
+  }
+}
