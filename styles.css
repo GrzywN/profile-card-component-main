@@ -33,6 +33,10 @@ main {
 }
 
 .card {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-animation: cardAnimation 1s;
+          animation: cardAnimation 1s;
   border-radius: 20px;
   background-color: white;
   width: -webkit-max-content;
@@ -115,5 +119,27 @@ main {
 
 .card__stats-label {
   font-size: smaller;
+}
+
+@-webkit-keyframes cardAnimation {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes cardAnimation {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 /*# sourceMappingURL=styles.css.map */

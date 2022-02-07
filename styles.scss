@@ -47,6 +47,8 @@ main {
 }
 
 .card {
+  transform: translateY(0px);
+  animation: cardAnimation 1s;
   border-radius: $border-radius;
   background-color: white;
   width: max-content;
@@ -99,5 +101,14 @@ main {
     &-label {
       font-size: smaller;
     }
+  }
+}
+
+@keyframes cardAnimation {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
