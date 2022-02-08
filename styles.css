@@ -35,8 +35,8 @@ main {
 .card {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-  -webkit-animation: cardAnimation 2s;
-          animation: cardAnimation 2s;
+  -webkit-animation: cardAnimation 2.5s;
+          animation: cardAnimation 2.5s;
   border-radius: 20px;
   background-color: white;
   width: -webkit-max-content;
@@ -124,8 +124,8 @@ main {
 
 @-webkit-keyframes cardAnimation {
   0% {
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
+    -webkit-transform: translateY(400%);
+            transform: translateY(400%);
   }
   100% {
     -webkit-transform: translateY(0%);
@@ -135,8 +135,8 @@ main {
 
 @keyframes cardAnimation {
   0% {
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
+    -webkit-transform: translateY(400%);
+            transform: translateY(400%);
   }
   100% {
     -webkit-transform: translateY(0%);

@@ -48,7 +48,7 @@ main {
 
 .card {
   transform: translateY(0px);
-  animation: cardAnimation 2s;
+  animation: cardAnimation 2.5s;
   border-radius: $border-radius;
   background-color: white;
   width: max-content;
@@ -107,7 +107,7 @@ main {
 
 @keyframes cardAnimation {
   0% {
-    transform: translateY(200%);
+    transform: translateY(400%);
   }
   100% {
     transform: translateY(0%);
