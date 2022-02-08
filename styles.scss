@@ -12,7 +12,7 @@ $dark-gray: hsl(0, 0%, 59%);
 
 //Font
 $font-family: "Kumbh Sans", sans-serif;
-$font-size: 18px;
+$font-size: 1.125rem;
 
 //Border
 $border-radius: 20px;
@@ -25,11 +25,11 @@ $border-radius: 20px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  image-rendering: optimizeSpeed;
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   background-color: $dark-cyan;
   background: no-repeat url(./images/bg-pattern-top.svg),
     no-repeat url(./images/bg-pattern-bottom.svg);
@@ -48,13 +48,14 @@ main {
 
 .card {
   transform: translateY(0px);
-  animation: cardAnimation 1s;
+  animation: cardAnimation 2s;
   border-radius: $border-radius;
   background-color: white;
   width: max-content;
   &__head {
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
+    background-color: $dark-cyan;
     background-image: url(./images/bg-pattern-card.svg);
     display: flex;
     justify-content: center;
@@ -78,7 +79,7 @@ main {
   &__header {
     font-size: $font-size;
     color: $very-dark-desaturated-blue;
-    &--age {
+    &-age {
       font-weight: 400;
       margin-left: 1ex;
       color: $dark-gray;
@@ -106,7 +107,7 @@ main {
 
 @keyframes cardAnimation {
   0% {
-    transform: translateY(100%);
+    transform: translateY(200%);
   }
   100% {
     transform: translateY(0%);

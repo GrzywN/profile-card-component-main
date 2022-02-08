@@ -6,11 +6,11 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  image-rendering: optimizeSpeed;
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   background-color: #19a2ae;
   background: no-repeat url(./images/bg-pattern-top.svg), no-repeat url(./images/bg-pattern-bottom.svg);
   background-color: #19a2ae;
@@ -35,8 +35,8 @@ main {
 .card {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-  -webkit-animation: cardAnimation 1s;
-          animation: cardAnimation 1s;
+  -webkit-animation: cardAnimation 2s;
+          animation: cardAnimation 2s;
   border-radius: 20px;
   background-color: white;
   width: -webkit-max-content;
@@ -47,6 +47,7 @@ main {
 .card__head {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  background-color: #19a2ae;
   background-image: url(./images/bg-pattern-card.svg);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,11 +87,11 @@ main {
 }
 
 .card__header {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #2d3248;
 }
 
-.card__header--age {
+.card__header-age {
   font-weight: 400;
   margin-left: 1ex;
   color: #969696;
@@ -113,7 +114,7 @@ main {
 
 .card__stats-header {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #2d3248;
 }
 
@@ -123,8 +124,8 @@ main {
 
 @-webkit-keyframes cardAnimation {
   0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
   }
   100% {
     -webkit-transform: translateY(0%);
@@ -134,8 +135,8 @@ main {
 
 @keyframes cardAnimation {
   0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
   }
   100% {
     -webkit-transform: translateY(0%);
